@@ -111,3 +111,27 @@ docker build -t spring .
 docker run -p 8080:8080 spring
 ```
 Button appears at localhost:8080
+
+## 1.14
+
+Dockerfile in 1.14 folder
+```
+docker build -t ruby .
+docker run -p 3000:3000 ruby
+```
+Works in localhost:3000
+
+## 1.15
+
+https://hub.docker.com/r/anttipessa/terminal
+
+## 1.16
+
+https://heroku-esim.herokuapp.com/
+
+
+## 1.17
+
+https://hub.docker.com/r/anttipessa/python
+
+Python interactive shell

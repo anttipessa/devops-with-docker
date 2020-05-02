@@ -35,7 +35,6 @@ Secret message is:
 ```
 
 ## 1.5
-
 ```
 docker run -it --name exe1.5 ubuntu:16.04 sh -c 'echo "Website?"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 Open a second cmd and type:
@@ -43,9 +42,71 @@ docker exec exe1.5 apt-get update
 docker exec exe1.5 apt-get install -y curl wget 
 Now input the url.
 ```
+
 ## 1.6
 Dockerfile in 1.6 folder
 ```
 docker build -t docker-clock .
 docker run docker-clock
+```
+
+## 1.7
+
+Dockerfile and script in 1.7 folder
+
+```
+docker build -t curler .
+docker run -it curler
+```
+
+## 1.8
+
+Create a empty logs textfile
+```
+docker run -v %cd%/logs.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+```
+
+## 1.9
+
+```
+docker run -p 3000:80 devopsdockeruh/ports_exercise
+```
+"Ports configured correctly!!" in localhost:3000
+
+
+## 1.10
+
+Dockerfile in 1.10 folder
+```
+docker build -t e10 .
+docker run -p 5000:5000 e10
+```
+
+## 1.11
+Dockerfile in 1.11 folder
+```
+docker build -t e11 .
+docker run -p 8000:8000 -v %cd%/logs.txt:/app/logs.txt e11
+```
+
+## 1.12
+
+Dockerfiles in 1.12 folder<br>
+Frontend:
+```
+docker build -t front .
+docker run -p 5000:5000 front
+```
+Backend:
+```
+docker build -t back .
+docker run -p 8000:8000 -v %cd%/logs.txt:/app/logs.txt back
+```
+
+## 1.13
+
+Dockerfile in 1.13 folder
+```
+docker build -t spring .
+docker run -p 8080:8080 spring
 ```

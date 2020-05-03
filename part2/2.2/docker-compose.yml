@@ -1,0 +1,10 @@
+version: '3.5' 
+
+services: 
+
+    exe2.2: 
+      image: devopsdockeruh/ports_exercise
+      build: . 
+      ports: 
+        - "3000:80"
+      container_name: exe2.2

@@ -23,3 +23,11 @@ docker-compose up
 ```
 docker-compose up --scale compute=10
 ```
+
+## 2.5
+
+Docker-compose.yml in 2.5 folder
+
+## 2.6 
+
+Docker-compose.yml in 2.6 folder

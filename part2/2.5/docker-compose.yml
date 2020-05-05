@@ -7,24 +7,10 @@ services:
       ports: 
         - 8000:8000
       container_name: back
-      depends_on: 
-        - db
       environment: 
         - API_URL=http://localhost:5000
         - REDIS=cache
         - REDIS_PORT=6379
-        - DB_USERNAME=user
-        - DB_PASSWORD=pass
-        - DB_NAME=db
-        - DB_HOST=post
-
-    db:
-      image: postgres
-      container_name: post
-      environment: 
-        - POSTGRES_USER=user
-        - POSTGRES_PASSWORD=pass
-        - POSTGRES_DB=db
     cache:
       image: redis
     front:

@@ -31,3 +31,15 @@ Docker-compose.yml in 2.5 folder
 ## 2.6 
 
 Docker-compose.yml in 2.6 folder
+
+## 2.7 
+
+Docker-compose.yml in 2.7 folder
+
+## 2.8
+
+Docker-compose.yml in 2.8 folder
+
+## 2.9
+
+Docker-compose.yml in 2.9 folder

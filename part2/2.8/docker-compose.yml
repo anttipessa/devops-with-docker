@@ -1,39 +1,38 @@
 version: '3.5' 
 
 services: 
-  
+
     back: 
       build: ./backend-example-docker-master 
-      ports: 
-        - 8000:8000
       container_name: back
       depends_on: 
         - db
       environment: 
-        - FRONT_URL=http://localhost:5000
-        - REDIS=redis
+        - FRONT_URL=front:5000
+        - REDIS=cache
+        - REDIS_PORT=6379
         - DB_USERNAME=user
         - DB_PASSWORD=pass
-        - DB_HOST=db  
+        - DB_NAME=db
+        - DB_HOST=post
+
     db:
       image: postgres
-      restart: unless-stopped
+      container_name: post
       environment: 
         - POSTGRES_USER=user
         - POSTGRES_PASSWORD=pass
-      volumes:
-        - database:/var/lib/postgresql/data
+        - POSTGRES_DB=db
+    cache:
+      image: redis
     front:
         build: ./frontend-example-docker-master 
-        ports: 
-          - 5000:5000
         container_name: front
         environment: 
-          - API_URL=http://localhost:8000
-    redis:
-      image: redis
-      volumes:
-        - redis:/data    
-volumes:
-  database:
-  redis:
+          - API_URL=back:8000
+    nginx:
+        image: nginx
+        volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        ports:
+          - 80:80

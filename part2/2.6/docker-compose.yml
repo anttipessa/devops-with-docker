@@ -10,7 +10,7 @@ services:
       depends_on: 
         - db
       environment: 
-        - API_URL=http://localhost:5000
+        - FRONT_END=http://localhost:5000
         - REDIS=cache
         - REDIS_PORT=6379
         - DB_USERNAME=user

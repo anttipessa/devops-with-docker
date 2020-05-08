@@ -1,0 +1,7 @@
+version: '3.5' 
+
+services: 
+    ruby: 
+      build: .
+      ports: 
+        - 3000:3000

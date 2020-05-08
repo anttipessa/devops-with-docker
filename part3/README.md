@@ -17,3 +17,11 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 examples_front      latest              9f60431ce651        18 seconds ago       479MB
 examples_back       latest              ddaa4ff6a19d        About a minute ago   309MB
 ```
+
+## 3.2 
+
+Dockerfile and the circleci config can be found in 3.2 folder.
+
+https://hub.docker.com/r/anttipessa/heroku-circleci
+
+https://heroku-circleci.herokuapp.com/

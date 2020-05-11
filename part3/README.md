@@ -30,3 +30,18 @@ https://heroku-circleci.herokuapp.com/
 ## 3.4
 
 Dockerfiles in the 3.4 folder.
+
+## 3.5 
+
+Before:
+```
+examples_front      latest              6aa30db47805        51 minutes ago      675MB
+examples_back       latest              4eae762978c1        57 minutes ago      335MB
+```
+
+After using `node:alpine`:
+
+```
+examples_front      latest              e3534ae21d73        About a minute ago   508MB
+examples_back       latest              525e5a9c6104        5 minutes ago        168MB
+```

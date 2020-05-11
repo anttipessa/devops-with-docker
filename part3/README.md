@@ -25,3 +25,8 @@ Dockerfile and the circleci config can be found in 3.2 folder.
 https://hub.docker.com/r/anttipessa/heroku-circleci
 
 https://heroku-circleci.herokuapp.com/
+
+
+## 3.4
+
+Dockerfiles in the 3.4 folder.

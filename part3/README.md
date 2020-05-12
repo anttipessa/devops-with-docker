@@ -45,3 +45,7 @@ After using `node:alpine`:
 examples_front      latest              e3534ae21d73        About a minute ago   508MB
 examples_back       latest              525e5a9c6104        5 minutes ago        168MB
 ```
+
+## 3.6
+
+Dockerfile in the 3.6 folder.

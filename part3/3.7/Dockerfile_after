@@ -1,0 +1,8 @@
+FROM openjdk:alpine as builder
+COPY . .
+RUN ./mvnw package
+
+FROM openjdk:alpine as app
+COPY --from=builder /target /target
+EXPOSE 8080
+CMD ["java" ,"-jar", "./target/docker-example-1.1.3.jar"]

@@ -51,7 +51,7 @@ examples_back       latest              525e5a9c6104        5 minutes ago       
 Dockerfile in the 3.6 folder.
 
 ## 3.7
-I chose the spring example project, heres the original image.
+I chose the spring example project, heres the original image:
 ```
 spring              latest              64c5665c99ea        2 minutes ago       596MB
 ```
@@ -60,3 +60,7 @@ With multi-stage build and using `alpine` variant:
 ```
 spring              latest              a69644008494        About a minute ago   121MB
 ```
+
+## 3.8
+
+![Kubernetes](./3.8/Kubernetes.png)
